@@ -3155,4 +3155,10 @@ end
 
 createOriginialElements()
 
+UserInputService.InputBegan:Connect(function(Input, IsTyping)
+    if Input.KeyCode == Enum.KeyCode.LeftControl and not IsTyping then
+        window.Visible = not window.Visible
+    end
+end)
+
 return Library
